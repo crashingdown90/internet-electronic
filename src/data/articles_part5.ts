@@ -213,5 +213,49 @@ export const articlesPart5 = [
     `,
     date: "2026-04-10",
     author: "Home Theater Specialist"
+  },
+  {
+    id: "26",
+    title: "How to Configure a Double NAT Router Setup Without Dropping Speeds",
+    slug: "how-to-configure-double-nat-router-setup",
+    excerpt: "Experiencing a double NAT issue on your network? Learn how to connect two routers seamlessly without sacrificing internet speed or stability.",
+    content: `
+      <h2>Understanding the Double NAT Problem</h2>
+      <p>A Double NAT (Network Address Translation) scenario occurs when you connect a secondary personal router to an ISP-provided modem/router combo, resulting in two separate private networks inside your home. While your devices will still connect to the internet, a Double NAT creates a barrier for online gaming lobbies, port forwarding, smart home synchronization, and remote office VPN connections because data packets get lost translating between the two separate networks.</p>
+
+      <figure>
+        <img src="/images/double_nat_setup.png" alt="Double NAT network architecture diagram" className="w-full h-auto rounded-2xl my-6 shadow-md" />
+        <figcaption className="text-center text-sm text-gray-500 mt-2">Figure 1: Traditional Double NAT vs Optimized Single NAT Topology.</figcaption>
+      </figure>
+
+      <h3>Why Double NAT Restricts Your Connection</h3>
+      <p>When you have two routers performing NAT, your computer's internal traffic has to pass through two gateways before reaching the public internet. This second layer of translating IP packets (e.g., from 192.168.2.x to 192.168.1.x, and then to your public IP) increases routing latency, blocks inbound connections automatically, and causes "Strict NAT" or "NAT Type 3" errors on consoles like PlayStation and Xbox. It can also cause VPN connections to drop frequently due to translation timeouts.</p>
+
+      <h2>The Two Methods to Resolve Double NAT Without Throttling Speeds</h2>
+      <p>You can solve this network conflict without buying expensive hardware or losing speed by implementing one of the following two standard configurations:</p>
+      
+      <h4>Method 1: Enabling Bridge Mode (IP Passthrough) on the ISP Modem (Recommended)</h4>
+      <p>The most elegant solution is to disable the routing features of your ISP modem/router combo entirely. By logging into the ISP gateway administrative panel and enabling "Bridge Mode" (also called IP Passthrough), the ISP device stops performing NAT. It passes the raw public IP address directly to the WAN port of your personal router. This transforms the ISP device into a simple modem, allowing your premium router to handle all DHCP leases and traffic routing seamlessly.</p>
+
+      <h4>Method 2: Configuring AP (Access Point) Mode on the Secondary Router</h4>
+      <p>If your ISP modem cannot be bridged (which is common with certain fiber or IPTV setups), you can instead disable the routing features of your personal secondary router. By changing its operating mode from "Router Mode" to "Access Point (AP) Mode," the secondary router disables its internal DHCP server and NAT engine. It simply acts as a wireless switch, letting the ISP modem assign IP addresses to all your smart electronics, unifying your entire home under a single network subnet.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: Does Bridge Mode reduce my Wi-Fi range?</h4>
+        <p className="text-sm">A: Bridge Mode disables the Wi-Fi broadcast on the ISP modem itself. You should turn off the ISP Wi-Fi and rely entirely on the stronger Wi-Fi signal of your personal router or mesh system for coverage.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: Can I still plug devices into the ISP modem when in Bridge Mode?</h4>
+        <p className="text-sm">A: No. Once bridged, only one Ethernet port on the ISP modem remains active, which must be connected to the WAN port of your personal router. Any other devices must be plugged directly into the personal router.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Will AP Mode disable my router's premium features?</h4>
+        <p className="text-sm">A: Yes. In AP mode, features like parental controls, QoS traffic prioritization, and security firewalls are handled by the main ISP modem, as your personal router is only behaving as a wireless bridge.</p>
+      </div>
+
+      <h3>Conclusion</h3>
+      <p>Fixing a Double NAT is straightforward once you decide which router should control your network's traffic. Whether you choose to bridge your ISP modem or convert your personal router to an Access Point, establishing a single NAT layer will immediately resolve connectivity dropouts and optimize throughput for a faster, lag-free smart home.</p>
+    `,
+    date: "2026-06-06",
+    author: "Network Architecture Lead"
   }
 ];

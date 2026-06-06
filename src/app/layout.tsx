@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
     default: 'Internet Electronic - Your Guide to Connectivity and Gadgets',
   },
   description: 'The ultimate source for internet connectivity guides, electronic gadget reviews, and smart home tips. Stay connected with Internet Electronic.',
+  verification: {
+    google: '-mN4_9YPP9lu4qmGboNFrPS7B67D8qesM9pxurPVC5U',
+  },
 };
 
 export default function RootLayout({
@@ -24,25 +29,7 @@ export default function RootLayout({
         {/* Global subtle dot pattern for texture */}
         <div className="absolute inset-0 bg-dot-pattern opacity-40 pointer-events-none z-0"></div>
 
-        <header className="sticky top-0 z-50 glass-panel shadow-sm border-b border-slate-200/50">
-          {/* Subtle gradient line at the top of the header */}
-          <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500"></div>
-          <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center relative">
-            <Link href="/" className="group flex items-center gap-2 text-2xl font-black tracking-tighter text-slate-900">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center shadow-md transform group-hover:rotate-12 transition-transform duration-300">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <span>Internet<span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600">Electronic</span></span>
-            </Link>
-            <nav className="hidden md:flex gap-8 font-bold text-sm tracking-wide uppercase text-slate-600">
-              <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
-              <Link href="/about" className="hover:text-sky-600 transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-sky-600 transition-colors">Contact</Link>
-            </nav>
-          </div>
-        </header>
+        <Navbar />
         
         <main className="flex-grow w-full max-w-6xl mx-auto px-6 py-12 relative z-10">
           {children}
@@ -70,6 +57,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <CookieConsent />
       </body>
     </html>
   );

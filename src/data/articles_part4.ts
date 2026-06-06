@@ -14,15 +14,27 @@ export const articlesPart4 = [
       </figure>
 
       <h3>Wi-Fi vs. Bluetooth vs. Z-Wave</h3>
-      <p>When selecting a smart lock, you must consider how it connects to your network. Bluetooth locks are highly secure and battery-efficient, but they require you to be standing right next to the door to operate them via your phone. Wi-Fi locks connect directly to your home router, allowing for remote operation from anywhere, but they drain batteries significantly faster. Z-Wave locks require a dedicated smart home hub (like Samsung SmartThings) but offer the best balance of battery life and remote capability.</p>
+      <p>When selecting a smart lock, you must consider how it connects to your network. Bluetooth locks are highly secure and battery-efficient, but they require you to be standing right next to the door to operate them via your phone. Wi-Fi locks connect directly to your home router, allowing for remote operation from anywhere, but they drain batteries significantly faster. Z-Wave locks require a dedicated smart home hub (like Samsung SmartThings) but offer the best balance of battery life and remote capability. Another emerging standard is Thread/Matter, which provides low-latency peer-to-peer communication with minimal power requirements.</p>
       
       <h2>Security Concerns: Can They Be Hacked?</h2>
-      <p>The most common question regarding smart locks is their vulnerability to hackers. While no electronic system is 100% impenetrable, reputable brands like August, Schlage, and Yale utilize military-grade AES 128-bit encryption for their digital communications. In reality, a burglar is far more likely to kick in your door or smash a window than they are to sit on your porch attempting to cryptographically hack your Wi-Fi lock.</p>
+      <p>The most common question regarding smart locks is their vulnerability to hackers. While no electronic system is 100% impenetrable, reputable brands like August, Schlage, and Yale utilize military-grade AES 128-bit encryption for their digital communications. In reality, a burglar is far more likely to kick in your door or smash a window than they are to sit on your porch attempting to cryptographically hack your Wi-Fi lock. Physical lock-picking remains a far higher threat than digital intrusion.</p>
 
       <figure>
         <img src="/images/cyber_security.png" alt="Encryption data locking" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Premium smart locks use advanced encryption to prevent digital intrusion.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: What happens to a smart lock if the power or internet goes out?</h4>
+        <p className="text-sm">A: Most smart locks run on standard AA/AAA batteries or internal rechargeable packs, so they will continue to lock/unlock locally. Wi-Fi remote access will be lost, but keypads and physical backup key cylinders will still function.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: How long do smart lock batteries usually last?</h4>
+        <p className="text-sm">A: Bluetooth and Z-Wave locks typically last 9 to 12 months. Pure Wi-Fi locks deplete batteries much faster, usually needing replacements every 3 to 6 months depending on usage.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Can I integrate my smart lock with Apple HomeKit or Google Home?</h4>
+        <p className="text-sm">A: Yes, most modern smart locks support these ecosystems. Look for locks that carry the "Matter" certification to ensure seamless cross-platform support with Siri, Google Assistant, and Alexa.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>A high-quality smart lock is one of the most impactful electronic upgrades you can make to your home. It eliminates the anxiety of losing physical keys and provides detailed logs of exactly who enters your home and when, establishing a robust first line of defense for your property.</p>
@@ -45,15 +57,27 @@ export const articlesPart4 = [
       </figure>
 
       <h3>Step 1: Network Segmentation</h3>
-      <p>The most effective way to secure IoT devices is through network segmentation. Modern routers allow you to create a "Guest Network." You should connect all your smart home electronics (TVs, smart plugs, lightbulbs) to this guest network, while keeping your personal devices (laptops, phones, NAS drives containing sensitive documents) on your primary network. If a hacker breaches your smart toaster, network segmentation prevents them from "jumping" over to your laptop to steal your banking information.</p>
+      <p>The most effective way to secure IoT devices is through network segmentation. Modern routers allow you to create a "Guest Network." You should connect all your smart home electronics (TVs, smart plugs, lightbulbs) to this guest network, while keeping your personal devices (laptops, phones, NAS drives containing sensitive documents) on your primary network. If a hacker breaches your smart toaster, network segmentation prevents them from "jumping" over to your laptop to steal your banking information. More advanced setups utilize VLANs to physically separate IoT traffic and enforce custom firewall rules.</p>
 
       <h2>Step 2: Change Default Credentials Immediately</h2>
-      <p>Never leave a smart device operating with its factory-default username and password (e.g., admin/admin). Hackers use automated scripts that constantly scan the internet for devices using these well-known defaults. Upon unboxing a new electronic device, immediately access its companion app or web interface and change the password to a complex, unique string of characters.</p>
+      <p>Never leave a smart device operating with its factory-default username and password (e.g., admin/admin). Hackers use automated scripts that constantly scan the internet for devices using these well-known defaults. Upon unboxing a new electronic device, immediately access its companion app or web interface and change the password to a complex, unique string of characters. You should also disable Universal Plug and Play (UPnP) on your router, as this protocol allows smart devices to open firewall ports automatically without your explicit permission.</p>
 
       <figure>
         <img src="/images/cyber_security.png" alt="Digital lock and shield" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Strong, unique passwords are the absolute minimum requirement for IoT security.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: What is a Botnet, and why would hackers want my smart lightbulb?</h4>
+        <p className="text-sm">A: A botnet is a network of hijacked computers/devices controlled remotely. Hackers hijack low-security IoT electronics to launch massive distributed denial-of-service (DDoS) attacks against major websites.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: Is a guest network really enough to protect my main computers?</h4>
+        <p className="text-sm">A: Yes. A guest network blocks connected clients from communicating locally with other devices on your home LAN. This isolates any compromised smart device, preventing lateral attack movement.</p>
+
+        <h4 className="font-bold text-slate-900">Q: How do I know if my smart camera has been hacked?</h4>
+        <p className="text-sm">A: Telltale signs include unusual camera movement, status LEDs lighting up when not in use, or unfamiliar IP addresses connected to your device inside your router's admin logs.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>Securing a smart home requires proactive effort. By segmenting your network, utilizing complex passwords, and ensuring you regularly install firmware updates pushed by the manufacturer, you can enjoy the automation of IoT electronics without exposing your digital life to severe cybersecurity risks.</p>
@@ -76,15 +100,27 @@ export const articlesPart4 = [
       </figure>
 
       <h3>Unmanaged vs. Managed Switches</h3>
-      <p>For 95% of home users, an <strong>Unmanaged Switch</strong> is the perfect solution. They are "plug and play" devices requiring zero configuration. You simply plug a single Ethernet cable from your router into the switch, and instantly gain 4, 8, or 16 additional ports for your electronics. <strong>Managed Switches</strong>, on the other hand, offer advanced features like VLAN tagging and port mirroring, which are intended for IT professionals managing complex corporate networks and are unnecessarily complicated for home use.</p>
+      <p>For 95% of home users, an <strong>Unmanaged Switch</strong> is the perfect solution. They are "plug and play" devices requiring zero configuration. You simply plug a single Ethernet cable from your router into the switch, and instantly gain 4, 8, or 16 additional ports for your electronics. <strong>Managed Switches</strong>, on the other hand, offer advanced features like VLAN tagging, Quality of Service (QoS) rule assignment, and port mirroring, which are intended for IT professionals managing complex corporate networks and are unnecessarily complicated for standard home use.</p>
 
       <h2>Gigabit vs. Multi-Gigabit Speeds</h2>
-      <p>When purchasing a switch, bandwidth capacity is crucial. A standard Gigabit switch (10/100/1000 Mbps) is incredibly affordable and perfectly sufficient for standard 4K streaming and gaming. However, if your ISP provides speeds exceeding 1 Gigabit, or if you frequently transfer massive video files between computers and a local NAS drive, you should invest in a Multi-Gigabit (2.5G or 10G) switch to prevent the switch itself from becoming a bottleneck in your network.</p>
+      <p>When purchasing a switch, bandwidth capacity is crucial. A standard Gigabit switch (10/100/1000 Mbps) is incredibly affordable and perfectly sufficient for standard 4K streaming and gaming. However, if your ISP provides speeds exceeding 1 Gigabit, or if you frequently transfer massive video files between computers and a local NAS drive, you should invest in a Multi-Gigabit (2.5G or 10G) switch to prevent the switch itself from becoming a bottleneck in your network. Check your cabling too—you will need at least Cat 6 cables for 10Gbps transfers over longer distances.</p>
 
       <figure>
         <img src="/images/digital_network.png" alt="High speed data transfer visualization" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Ensure your switch's bandwidth matches the capabilities of your electronics.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: Does plugging devices into a switch slow down my internet connection?</h4>
+        <p className="text-sm">A: No. Unlike old "hubs," modern network switches send data packets directly and exclusively to the target port, preventing network collisions and maintaining maximum bandwidth speeds.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: What is Power over Ethernet (PoE) in switches?</h4>
+        <p className="text-sm">A: PoE switches supply electrical power through the Ethernet cable itself. This lets you power electronics like security cameras or Wi-Fi access points directly through the network cable without needing wall adapters.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Do I need a special Ethernet cable to connect my router to the switch?</h4>
+        <p className="text-sm">A: No. A standard Cat 5e or Cat 6 Ethernet cable will connect your router to the switch. The switch will automatically configure the link speed (a feature called Auto-MDI/MDIX).</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>An Ethernet switch is a cheap, highly effective piece of hardware that guarantees your most important electronic devices remain hardwired, stable, and fast. By choosing a simple unmanaged Gigabit switch, you can permanently eliminate the frustration of running out of router ports.</p>
@@ -107,15 +143,27 @@ export const articlesPart4 = [
       </figure>
 
       <h3>The Foundation: Ultrawide Monitors and Hubs</h3>
-      <p>The single best upgrade for any remote worker is an ultrawide monitor. Replacing dual-screen setups with a single, massive 34-inch or 49-inch curved display eliminates annoying bezels and allows for seamless window management. To connect this, a high-quality Thunderbolt 4 docking station is essential. A dock allows you to connect your monitor, external hard drives, Ethernet cable, and power supply to your laptop using a single cable, creating a clean, clutter-free desk.</p>
+      <p>The single best upgrade for any remote worker is an ultrawide monitor. Replacing dual-screen setups with a single, massive 34-inch or 49-inch curved display eliminates annoying bezels and allows for seamless window management. To connect this, a high-quality Thunderbolt 4 docking station is essential. A dock allows you to connect your monitor, external hard drives, Ethernet cable, and power supply to your laptop using a single cable, creating a clean, clutter-free desk. A high-refresh-rate IPS panel also reduces eye strain during 10-hour workdays.</p>
 
       <h2>Professional-Grade Communication Electronics</h2>
-      <p>In the era of endless Zoom calls, poor audio and video quality are unacceptable. Ditch the grainy built-in laptop webcam for a dedicated 4K external webcam with auto-framing capabilities. Furthermore, audio quality is arguably more important than video. A dedicated USB condenser microphone (like a Blue Yeti or Shure MV7) ensures your voice is broadcasted with radio-broadcaster clarity, eliminating background noise and making you sound significantly more professional in meetings.</p>
+      <p>In the era of endless Zoom calls, poor audio and video quality are unacceptable. Ditch the grainy built-in laptop webcam for a dedicated 4K external webcam with auto-framing capabilities. Furthermore, audio quality is arguably more important than video. A dedicated USB condenser microphone (like a Blue Yeti or Shure MV7) ensures your voice is broadcasted with radio-broadcaster clarity, eliminating background noise and making you sound significantly more professional in meetings. Proper acoustic panels and studio monitors also enrich your home listening experience.</p>
 
       <figure>
         <img src="/images/cloud_computing.png" alt="Cloud collaboration tools" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">High-quality electronics ensure seamless communication with cloud-based teams.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: Why should I choose an Ultrawide monitor over dual monitors?</h4>
+        <p className="text-sm">A: Ultrawide monitors remove the physical bezel down the middle of your view, enabling seamless side-by-side window multitasking and preventing neck strain from constantly turning your head.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: What is the benefit of a Thunderbolt 4 dock over a cheap USB-C hub?</h4>
+        <p className="text-sm">A: Thunderbolt 4 offers 40Gbps bandwidth, supporting dual high-resolution displays, fast data transfers, and high-wattage laptop charging simultaneously without overheating or signal dropouts.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Do mechanical keyboards really help with productivity?</h4>
+        <p className="text-sm">A: Yes. Mechanical keyboards use tactile switches that offer precise physical feedback, reducing typing mistakes, improving speed, and decreasing finger fatigue during long coding or writing sessions.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>Investing in your home office setup is an investment in your career. By utilizing ultrawide displays, Thunderbolt hubs, and broadcast-quality communication electronics, you minimize technological friction, allowing you to focus entirely on producing your best work from the comfort of your home.</p>
@@ -138,7 +186,7 @@ export const articlesPart4 = [
       </figure>
 
       <h3>Public vs. Private IP Addresses</h3>
-      <p>Your Internet Service Provider (ISP) assigns a single <strong>Public IP Address</strong> to your home modem; this is the address the entire global internet sees. However, your router acts as a digital traffic cop, assigning unique <strong>Private IP Addresses</strong> (usually starting with 192.168.x.x or 10.0.x.x) to every smartphone, TV, and laptop inside your house. This system, known as NAT (Network Address Translation), allows dozens of electronics to share a single public connection securely.</p>
+      <p>Your Internet Service Provider (ISP) assigns a single <strong>Public IP Address</strong> to your home modem; this is the address the entire global internet sees. However, your router acts as a digital traffic cop, assigning unique <strong>Private IP Addresses</strong> (usually starting with 192.168.x.x or 10.0.x.x) to every smartphone, TV, and laptop inside your house. This system, known as NAT (Network Address Translation), allows dozens of electronics to share a single public connection securely. A subnet mask (usually 255.255.255.0) tells your devices which IP block is their local neighborhood.</p>
 
       <h2>The Role of DNS (Domain Name System)</h2>
       <p>While computers communicate flawlessly using numerical IP addresses, humans cannot easily memorize them. The Domain Name System (DNS) is the phonebook of the internet. When you type "internet-electronic.com" into your browser, your computer queries a DNS server to translate that human-readable domain name into the specific numerical IP address of the server hosting the website. Changing your router's default DNS server to a faster alternative (like Google's 8.8.8.8 or Cloudflare's 1.1.1.1) can noticeably speed up web browsing.</p>
@@ -147,6 +195,18 @@ export const articlesPart4 = [
         <img src="/images/cloud_computing.png" alt="Connecting to remote servers" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">DNS translates domain names into the IP addresses required to access cloud servers.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: What is the difference between IPv4 and IPv6?</h4>
+        <p className="text-sm">A: IPv4 uses 32-bit addresses (e.g. 192.168.1.1) and is running out of unique addresses globally. IPv6 uses 128-bit hexadecimal addresses, providing a virtually infinite supply of addresses for future smart devices.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: What does a DHCP server do?</h4>
+        <p className="text-sm">A: DHCP (Dynamic Host Configuration Protocol) is a software helper inside your router that automatically hands out IP addresses to your electronics when they join your network, preventing address conflicts.</p>
+
+        <h4 className="font-bold text-slate-900">Q: What is a Static IP, and when should I use one?</h4>
+        <p className="text-sm">A: A Static IP is an address that never changes. You should assign static IPs to hardware like NAS devices, printers, and smart hubs so they are always found at the exact same location by client electronics.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>Understanding these core networking concepts demystifies how your electronics function. By grasping the relationship between IP addresses, subnets, and DNS, you gain the ability to accurately troubleshoot connection errors and optimize your network for superior performance.</p>

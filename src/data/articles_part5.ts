@@ -14,15 +14,27 @@ export const articlesPart5 = [
       </figure>
 
       <h3>How Mesh Networks Dominate Space</h3>
-      <p>Instead of relying on a single broadcast point, a Mesh system utilizes a primary router connected to your modem, along with several "satellite nodes" placed strategically throughout the house. These nodes do not just act as simple range extenders; they utilize a dedicated wireless "backhaul" frequency to communicate rapidly with one another. This creates a unified, seamless blanket of coverage under a single network name. As you walk with your smartphone from the basement to the attic, the system intelligently and instantly hands off your connection to the nearest node without dropping a single packet.</p>
+      <p>Instead of relying on a single broadcast point, a Mesh system utilizes a primary router connected to your modem, along with several "satellite nodes" placed strategically throughout the house. These nodes do not just act as simple range extenders; they utilize a dedicated wireless "backhaul" frequency to communicate rapidly with one another. This creates a unified, seamless blanket of coverage under a single network name. As you walk with your smartphone from the basement to the attic, the system intelligently and instantly hands off your connection to the nearest node without dropping a single packet. Dynamic routing protocols determine the optimal path for data packets on the fly.</p>
       
       <h2>Top Contenders: Eero, Orbi, and Deco</h2>
-      <p>When outfitting a massive home, tri-band mesh systems are mandatory. Netgear's Orbi series consistently delivers the highest raw throughput for gigabit internet plans, making it ideal for 4K streaming across multiple TVs. Amazon's Eero Pro systems are renowned for their incredible ease of setup and intelligent traffic management, ideal for homes dense with smart IoT electronics. TP-Link's Deco systems offer an excellent balance of high performance and competitive pricing.</p>
+      <p>When outfitting a massive home, tri-band mesh systems are mandatory. Netgear's Orbi series consistently delivers the highest raw throughput for gigabit internet plans, making it ideal for 4K streaming across multiple TVs. Amazon's Eero Pro systems are renowned for their incredible ease of setup and intelligent traffic management, ideal for homes dense with smart IoT electronics. TP-Link's Deco systems offer an excellent balance of high performance and competitive pricing, featuring robust parental controls and built-in network security layers.</p>
 
       <figure>
         <img src="/images/wifi_router.png" alt="Modern mesh satellite node" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Satellite nodes are designed to blend into your home's decor.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: What is the difference between Dual-Band and Tri-Band Mesh systems?</h4>
+        <p className="text-sm">A: Dual-band systems share their 2.4GHz and 5GHz bands for both device connections and node communication. Tri-band systems add a second 5GHz (or 6GHz) band dedicated solely to node-to-node communication, ensuring maximum internet speeds for your devices.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: How many mesh nodes do I need for my home?</h4>
+        <p className="text-sm">A: Generally, a 2-pack system covers up to 3,000-4,000 sq ft. For homes larger than 4,500 sq ft or properties with thick masonry walls and multiple floors, a 3-pack is recommended to eliminate dead zones.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Can I connect my mesh nodes using Ethernet cables?</h4>
+        <p className="text-sm">A: Yes. This is called "Ethernet Backhaul." Connecting nodes physically with Cat 6 cables delivers the absolute fastest and most reliable speeds because it frees up all wireless bands entirely for client devices.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>If you live in a home exceeding 3,000 square feet, struggling with a single router is an exercise in futility. Investing in a premium Tri-Band Mesh Wi-Fi system is the only guaranteed method to ensure every inch of your property—and every electronic device within it—remains connected at maximum speed.</p>
@@ -37,7 +49,7 @@ export const articlesPart5 = [
     excerpt: "Stop buffering and start browsing. Follow this step-by-step diagnostic guide to identify and fix the root causes of slow home internet.",
     content: `
       <h2>Isolate the Problem: ISP vs. Local Network</h2>
-      <p>When a web page fails to load or a video constantly buffers, the immediate reaction is to blame the Internet Service Provider (ISP). However, the vast majority of "slow internet" issues are caused by localized problems within your own home network. The first diagnostic step is isolation. Connect a laptop directly into your modem using an Ethernet cable and run a speed test. If the speed matches what you pay for, your ISP is fine, and the issue lies entirely with your Wi-Fi router or electronic devices.</p>
+      <p>When a web page fails to load or a video constantly buffers, the immediate reaction is to blame the Internet Service Provider (ISP). However, the vast majority of "slow internet" issues are caused by localized problems within your own home network. The first diagnostic step is isolation. Connect a laptop directly into your modem using an Ethernet cable and run a speed test. If the speed matches what you pay for, your ISP is fine, and the issue lies entirely with your Wi-Fi router or electronic devices. This simple step saves hours of customer service calls.</p>
 
       <figure>
         <img src="/images/ethernet_cables.png" alt="Testing connection with ethernet" className="w-full h-auto rounded-2xl my-6 shadow-md" />
@@ -45,15 +57,27 @@ export const articlesPart5 = [
       </figure>
 
       <h3>Combating Wireless Interference</h3>
-      <p>If your hardwired speed is fast but your Wi-Fi is agonizingly slow, interference is the likely culprit. The 2.4GHz Wi-Fi band is heavily congested, sharing frequencies with microwaves, baby monitors, and your neighbor's routers. Log into your router's administrative panel and change the Wi-Fi channel to the least crowded option (channels 1, 6, and 11 are non-overlapping). Whenever possible, force your modern electronics to connect to the 5GHz band, which offers significantly faster speeds and less interference, albeit at a shorter range.</p>
+      <p>If your hardwired speed is fast but your Wi-Fi is agonizingly slow, interference is the likely culprit. The 2.4GHz Wi-Fi band is heavily congested, sharing frequencies with microwaves, baby monitors, and your neighbor's routers. Log into your router's administrative panel and change the Wi-Fi channel to the least crowded option (channels 1, 6, and 11 are non-overlapping). Whenever possible, force your modern electronics to connect to the 5GHz band, which offers significantly faster speeds and less interference, albeit at a shorter range. Newer routers supporting DFS (Dynamic Frequency Selection) channels unlock even cleaner frequency lanes.</p>
 
       <h2>The Hardware Bottleneck</h2>
-      <p>Sometimes, the electronics themselves are the problem. If you are paying for a 1 Gigabit internet plan but using an ancient router from 2015, the router simply lacks the processing power to handle gigabit data streams, acting as a massive bottleneck. Similarly, an old laptop with a severely outdated Wi-Fi network card will never achieve fast speeds, regardless of how powerful your router is. Ensure your networking hardware is utilizing at least the Wi-Fi 6 standard.</p>
+      <p>Sometimes, the electronics themselves are the problem. If you are paying for a 1 Gigabit internet plan but using an ancient router from 2015, the router simply lacks the processing power to handle gigabit data streams, acting as a massive bottleneck. Similarly, an old laptop with a severely outdated Wi-Fi network card will never achieve fast speeds, regardless of how powerful your router is. Ensure your networking hardware is utilizing at least the Wi-Fi 6 standard to ensure efficient device queue management.</p>
 
       <figure>
         <img src="/images/cloud_computing.png" alt="Data bottleneck visualization" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Outdated hardware restricts data flow, preventing access to high-speed cloud services.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: Why does my internet speed drop at night?</h4>
+        <p className="text-sm">A: During peak evening hours, local network node congestion from ISPs (especially cable and 5G connections) can cause throttling. Additionally, check if other electronics in your house are running automated backups.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: Does restarting my router actually help fix speeds?</h4>
+        <p className="text-sm">A: Yes. Power cycling clears the router's internal RAM, drops inactive background connections, and forces the device to re-scan for the least congested Wi-Fi channels in your area.</p>
+
+        <h4 className="font-bold text-slate-900">Q: What is a bufferbloat, and how do I solve it?</h4>
+        <p className="text-sm">A: Bufferbloat occurs when routers queue too much data during heavy transfers, driving up ping and lagging other electronics. Enabling SQM (Smart Queue Management) or QoS on your router resolves this.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>Fixing slow internet requires a methodical approach. By isolating the problem to either your ISP or your local network, minimizing wireless interference, and upgrading obsolete electronics, you can restore your network to peak performance and eliminate buffering for good.</p>
@@ -76,15 +100,27 @@ export const articlesPart5 = [
       </figure>
 
       <h3>Choosing an Ecosystem: Philips Hue vs. Alternatives</h3>
-      <p>The smartest approach to connected lighting is committing to a single ecosystem to ensure all bulbs communicate seamlessly. Philips Hue is the undisputed gold standard; their bulbs use the Zigbee protocol to communicate with a central 'Bridge' connected to your router. This means the bulbs don't clog up your Wi-Fi network bandwidth, and they respond instantaneously. While more expensive, the reliability is unmatched. Alternatives like LIFX connect directly via Wi-Fi without a hub, offering incredibly vibrant colors, but can cause network congestion if you install dozens of them.</p>
+      <p>The smartest approach to connected lighting is committing to a single ecosystem to ensure all bulbs communicate seamlessly. Philips Hue is the undisputed gold standard; their bulbs use the Zigbee protocol to communicate with a central 'Bridge' connected to your router. This means the bulbs don't clog up your Wi-Fi network bandwidth, and they respond instantaneously. While more expensive, the reliability is unmatched. Alternatives like LIFX connect directly via Wi-Fi without a hub, offering incredibly vibrant colors, but can cause network congestion if you install dozens of them on consumer routers.</p>
 
       <h2>Health and Productivity Benefits</h2>
-      <p>Smart lighting goes beyond mere aesthetics; it can actively improve your well-being. Using "Circadian Rhythm" routines, your smart electronics can automatically adjust the color temperature of your lights throughout the day. They emit cool, blue-toned light in the morning to promote alertness and productivity, and gradually transition to warm, amber light in the evening to stimulate melatonin production and prepare your body for restful sleep.</p>
+      <p>Smart lighting goes beyond mere aesthetics; it can actively improve your well-being. Using "Circadian Rhythm" routines, your smart electronics can automatically adjust the color temperature of your lights throughout the day. They emit cool, blue-toned light in the morning to promote alertness and productivity, and gradually transition to warm, amber light in the evening to stimulate melatonin production and prepare your body for restful sleep. This mimics natural sunlight patterns inside your home.</p>
 
       <figure>
         <img src="/images/iot_concept.png" alt="Interconnected IoT devices" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Lights integrate with other IoT devices to create fully automated home scenes.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: Do smart bulbs use electricity when the light switch is turned off?</h4>
+        <p className="text-sm">A: Only a tiny amount. Since the bulb is a micro-computer waiting for network commands, it uses a very small standby current (less than 0.5 Watts), which is negligible on utility bills.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: What is the difference between Zigbee and Wi-Fi smart bulbs?</h4>
+        <p className="text-sm">A: Wi-Fi bulbs connect directly to your router, which can overwhelm home networks. Zigbee bulbs form a mesh network with each other and communicate via a single gateway, making them more stable for large installs.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Can I use smart bulbs with traditional dimmer switches?</h4>
+        <p className="text-sm">A: No. Standard wall dimmers disrupt the voltage required to run the bulb's internal computer, causing flickering or damage. You should keep wall switches fully on and dim via apps or smart remote switches.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>Implementing a smart lighting ecosystem is a profound upgrade to any living space. By carefully selecting a robust protocol like Zigbee and utilizing automation, you turn static light fixtures into dynamic electronics that enhance your daily routine, improve your sleep cycle, and elevate your home's aesthetic.</p>
@@ -107,15 +143,27 @@ export const articlesPart5 = [
       </figure>
 
       <h3>Power Options: Battery, Solar, and Wired</h3>
-      <p>When selecting a Wi-Fi camera, power delivery is the primary consideration. Battery-powered cameras (like Arlo or Ring) offer ultimate placement flexibility but require you to recharge them every few months. Attaching a compatible solar panel accessory eliminates this maintenance entirely. Alternatively, if you have existing exterior electrical outlets or floodlight wiring, choosing a hardwired Wi-Fi camera ensures continuous 24/7 recording without ever worrying about a dead battery.</p>
+      <p>When selecting a Wi-Fi camera, power delivery is the primary consideration. Battery-powered cameras (like Arlo or Ring) offer ultimate placement flexibility but require you to recharge them every few months. Attaching a compatible solar panel accessory eliminates this maintenance entirely. Alternatively, if you have existing exterior electrical outlets or floodlight wiring, choosing a hardwired Wi-Fi camera ensures continuous 24/7 recording without ever worrying about a dead battery or gaps in clip recording.</p>
 
       <h2>Artificial Intelligence and Active Deterrence</h2>
-      <p>The true value of modern security electronics lies in their onboard software. Premium Wi-Fi cameras utilize edge AI processing to differentiate between a swaying tree branch, a passing car, an animal, and a human. This eliminates the annoyance of constant false-alarm notifications. Furthermore, cameras equipped with "Active Deterrence" can automatically activate blinding LED spotlights and blare a siren the moment a human is detected on your property at night, stopping a crime before it happens.</p>
+      <p>The true value of modern security electronics lies in their onboard software. Premium Wi-Fi cameras utilize edge AI processing to differentiate between a swaying tree branch, a passing car, an animal, and a human. This eliminates the annoyance of constant false-alarm notifications. Furthermore, cameras equipped with "Active Deterrence" can automatically activate blinding LED spotlights and blare a siren the moment a human is detected on your property at night, stopping a crime before it happens. Local microSD storage allows data recording without cloud subscription lockouts.</p>
 
       <figure>
         <img src="/images/wifi_router.png" alt="High speed wireless transmission" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Outdoor cameras require a strong, stable connection to your home's Wi-Fi router.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: How far away from my router can I install an outdoor camera?</h4>
+        <p className="text-sm">A: Typically 50 to 100 feet. However, exterior brick, metal siding, and insulation block Wi-Fi signals heavily. Installing a Wi-Fi range extender or a dedicated outdoor mesh node fixes signal drops.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: Are Wi-Fi security cameras safe from jamming?</h4>
+        <p className="text-sm">A: Sophisticated thieves can utilize de-authentication devices to jam Wi-Fi frequencies. To mitigate this, choose security cameras that support local recording on a microSD card during offline states.</p>
+
+        <h4 className="font-bold text-slate-900">Q: Do outdoor cameras require a paid cloud subscription to work?</h4>
+        <p className="text-sm">A: Many brands require monthly cloud fees for rolling history storage. However, brands like Eufy and Reolink offer local data storage hubs inside the house with zero ongoing monthly fees.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>An integrated Wi-Fi camera system provides unparalleled peace of mind. By leveraging high-speed internet, AI detection, and solar technology, you can easily install a professional-grade electronic security perimeter around your home without hiring a contractor.</p>
@@ -130,7 +178,7 @@ export const articlesPart5 = [
     excerpt: "Optimize your Smart TV's network connection and picture settings to ensure a flawless, theater-quality viewing experience at home.",
     content: `
       <h2>The Bandwidth Demands of 4K and HDR</h2>
-      <p>Bringing a massive, new 4K OLED Smart TV into your living room is incredibly exciting. However, consumers are often disappointed when their Netflix or Disney+ streams look pixelated or constantly pause to buffer. Streaming Ultra High-Definition (4K) content infused with High Dynamic Range (HDR) data requires an immense amount of bandwidth. If your TV's connection to the internet is unstable, the streaming service will automatically degrade the picture quality to compensate.</p>
+      <p>Bringing a massive, new 4K OLED Smart TV into your living room is incredibly exciting. However, consumers are often disappointed when their Netflix or Disney+ streams look pixelated or constantly pause to buffer. Streaming Ultra High-Definition (4K) content infused with High Dynamic Range (HDR) data requires an immense amount of bandwidth. If your TV's connection to the internet is unstable, the streaming service will automatically degrade the picture quality to compensate, ruining your premium electronics purchase.</p>
 
       <figure>
         <img src="/images/digital_network.png" alt="High bandwidth media streaming" className="w-full h-auto rounded-2xl my-6 shadow-md" />
@@ -138,15 +186,27 @@ export const articlesPart5 = [
       </figure>
 
       <h3>Optimizing the Network Connection</h3>
-      <p>The golden rule of home theater electronics: If it has an Ethernet port, use it. Hardwiring your Smart TV directly to your router using a Cat 6 cable guarantees the stable, high-speed connection required for 4K streaming. If hardwiring is impossible, ensure your TV is connected to the 5GHz Wi-Fi band, not the crowded 2.4GHz band. If the TV is far from the router, placing a Mesh Wi-Fi node directly behind the entertainment center will act as a powerful wireless bridge.</p>
+      <p>The golden rule of home theater electronics: If it has an Ethernet port, use it. Hardwiring your Smart TV directly to your router using a Cat 6 cable guarantees the stable, high-speed connection required for 4K streaming. If hardwiring is impossible, ensure your TV is connected to the 5GHz Wi-Fi band, not the crowded 2.4GHz band. If the TV is far from the router, placing a Mesh Wi-Fi node directly behind the entertainment center will act as a powerful wireless bridge, feeding a local gigabit link to the TV ports.</p>
 
       <h2>Disabling Post-Processing Features</h2>
-      <p>Out of the box, almost all Smart TVs are configured with terrible default picture settings designed to look bright under harsh retail store lights. To achieve cinematic quality, you must dive into the settings and disable "Motion Smoothing" (often called TruMotion or Auto Motion Plus). This electronic post-processing creates the dreaded "Soap Opera Effect," making blockbuster movies look like cheap daytime television. Switch your TV to "Filmmaker Mode" or "Cinema Mode" for the most accurate color representation.</p>
+      <p>Out of the box, almost all Smart TVs are configured with terrible default picture settings designed to look bright under harsh retail store lights. To achieve cinematic quality, you must dive into the settings and disable "Motion Smoothing" (often called TruMotion or Auto Motion Plus). This electronic post-processing creates the dreaded "Soap Opera Effect," making blockbuster movies look like cheap daytime television. Switch your TV to "Filmmaker Mode" or "Cinema Mode" for the most accurate color representation and original grain profiles.</p>
 
       <figure>
         <img src="/images/smart_home.png" alt="Cinematic smart living room" className="w-full h-auto rounded-2xl my-6 shadow-md" />
         <figcaption className="text-center text-sm text-gray-500 mt-2">Proper configuration integrates your TV into a premium smart home experience.</figcaption>
       </figure>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-6">
+        <h4 className="font-bold text-slate-900 mt-0">Q: What download speed is required to stream Netflix in 4K?</h4>
+        <p className="text-sm">A: Netflix recommends a consistent speed of at least 15 to 25 Mbps. However, if other electronics are connected, you should have at least 100 Mbps total bandwidth to prevent buffer conflicts.</p>
+        
+        <h4 className="font-bold text-slate-900">Q: Why does my TV's built-in Ethernet port limit speeds to 100 Mbps?</h4>
+        <p className="text-sm">A: Regrettably, most TV brands install cheap Fast Ethernet (100 Mbps) ports to save costs. If you need faster transfers (e.g. streaming 80 Mbps raw home server media), use 5GHz Wi-Fi or a compatible USB-to-Ethernet adapter.</p>
+
+        <h4 className="font-bold text-slate-900">Q: What is HDR, and how does it affect streaming?</h4>
+        <p className="text-sm">A: HDR (High Dynamic Range) expands contrast and color ranges. While it uses slightly more data bandwidth, the television must have high peak brightness (like OLED or Mini-LED) to render it properly.</p>
+      </div>
 
       <h3>Conclusion</h3>
       <p>A high-end Smart TV is only as good as the network feeding it and the settings controlling it. By prioritizing a hardwired connection and disabling artificial image processing, you ensure your premier electronic display delivers the flawless, cinematic experience the director intended.</p>

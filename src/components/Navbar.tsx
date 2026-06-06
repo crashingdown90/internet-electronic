@@ -20,10 +20,10 @@ export default function Navbar() {
   };
 
   const categories = [
-    { name: "Networking", slug: "Networking" },
-    { name: "Smart Home", slug: "Smart Home" },
-    { name: "Cybersecurity", slug: "Cybersecurity" },
-    { name: "Productivity", slug: "Productivity" }
+    { name: "Networking", slug: "networking" },
+    { name: "Smart Home", slug: "smart-home" },
+    { name: "Cybersecurity", slug: "cybersecurity" },
+    { name: "Productivity", slug: "productivity" }
   ];
 
   return (
@@ -89,7 +89,7 @@ export default function Navbar() {
                   {categories.map((cat) => (
                     <Link 
                       key={cat.slug} 
-                      href={`/?cat=${encodeURIComponent(cat.slug)}`}
+                      href={`/category/${cat.slug}`}
                       onClick={() => setDropdownOpen(false)}
                       className="block px-4 py-2.5 hover:bg-slate-50 rounded-xl text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
                     >
@@ -162,7 +162,7 @@ export default function Navbar() {
             {categories.map((cat) => (
               <Link 
                 key={cat.slug} 
-                href={`/?cat=${encodeURIComponent(cat.slug)}`}
+                href={`/category/${cat.slug}`}
                 className="hover:text-sky-600 transition-colors py-0.5"
               >
                 {cat.name}
@@ -209,7 +209,7 @@ export default function Navbar() {
               {categories.map((cat) => (
                 <Link 
                   key={cat.slug} 
-                  href={`/?cat=${encodeURIComponent(cat.slug)}`}
+                  href={`/category/${cat.slug}`}
                   onClick={() => setMobileMenuOpen(false)}
                   className="p-3 bg-slate-50 hover:bg-sky-50 hover:text-sky-600 rounded-xl text-center text-xs font-black uppercase tracking-wider text-slate-600 border border-slate-100 transition-colors"
                 >

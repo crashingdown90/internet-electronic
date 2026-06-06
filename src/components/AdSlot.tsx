@@ -45,7 +45,7 @@ export default function AdSlot({ slotId, format = "auto", responsive = true }: A
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-f08c47fec0942fa0"
+        data-ad-client="ca-pub-9806436984867634"
         data-ad-slot={slotId}
         data-ad-format={format}
         data-full-width-responsive={responsive ? "true" : "false"}

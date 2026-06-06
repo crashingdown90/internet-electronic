@@ -1,3 +1,2 @@
 # Google AdSense authorized seller configuration
-# Replace "f08c47fec0942fa0" with your actual AdSense Publisher ID (e.g. pub-1234567890123456)
-google.com, pub-f08c47fec0942fa0, DIRECT, f08c47fec0942fa0
+google.com, pub-9806436984867634, DIRECT, f08c47fec0942fa0

@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import CookieConsent from "@/components/CookieConsent";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
   verification: {
     google: '-mN4_9YPP9lu4qmGboNFrPS7B67D8qesM9pxurPVC5U',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-9806436984867634',
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9806436984867634"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-slate-50 text-slate-900 relative`}>
         {/* Global subtle dot pattern for texture */}
         <div className="absolute inset-0 bg-dot-pattern opacity-40 pointer-events-none z-0"></div>

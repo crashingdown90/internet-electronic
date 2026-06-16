@@ -62,6 +62,7 @@ export function TableOfContents() {
       };
     });
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setToc(items);
 
     // IntersectionObserver to spy on scroll position and highlight active header

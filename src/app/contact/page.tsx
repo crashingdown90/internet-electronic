@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the Internet Electronic team for inquiries, support, or feedback.",
+  description: "Have questions about home networking or smart electronics? Get in touch with the Internet Electronic team for expert support, inquiries, or feedback.",
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Have a question about your home network? Want to suggest an article topic? We'd love to hear from you.
+          Have a question about your home network? Want to suggest an article topic? We&apos;d love to hear from you.
         </p>
       </div>
 

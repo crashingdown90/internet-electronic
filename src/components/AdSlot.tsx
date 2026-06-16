@@ -12,9 +12,9 @@ export default function AdSlot({ slotId, format = "auto", responsive = true }: A
   useEffect(() => {
     // Attempt to initialize adsbygoogle after component mounts
     try {
-      if (typeof window !== "undefined") {
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-      }
+        const win = window as unknown as { adsbygoogle?: Record<string, unknown>[] };
+        win.adsbygoogle = win.adsbygoogle || [];
+        win.adsbygoogle.push({});
     } catch (err) {
       console.warn("AdSense script initialization failed or ad block blocked:", err);
     }

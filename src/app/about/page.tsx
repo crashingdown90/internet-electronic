@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn more about Internet Electronic, our mission, and our team of connectivity and smart home experts.",
+  description: "Learn more about Internet Electronic, our mission, and our team of home networking and smart electronics experts. We help you stay connected.",
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
         
         <h2>Our Mission</h2>
         <p>
-          In an increasingly connected world, understanding the technology that powers our daily lives is no longer optional—it's essential. Our mission is to demystify complex networking concepts and electronic hardware, empowering everyday users to build secure, high-speed, and intelligent home environments. We believe that technology should work for you, not the other way around.
+          In an increasingly connected world, understanding the technology that powers our daily lives is no longer optional—it&apos;s essential. Our mission is to demystify complex networking concepts and electronic hardware, empowering everyday users to build secure, high-speed, and intelligent home environments. We believe that technology should work for you, not the other way around.
         </p>
         
         <h2>Expertise and Trust (E-E-A-T)</h2>

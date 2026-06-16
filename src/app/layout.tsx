@@ -9,16 +9,33 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://internet-electronic.com'),
   title: {
     template: '%s | Internet Electronic',
     default: 'Internet Electronic - Your Guide to Connectivity and Gadgets',
   },
   description: 'The ultimate source for internet connectivity guides, electronic gadget reviews, and smart home tips. Stay connected with Internet Electronic.',
+  alternates: {
+    canonical: '/',
+  },
   verification: {
     google: '-mN4_9YPP9lu4qmGboNFrPS7B67D8qesM9pxurPVC5U',
   },
   other: {
     'google-adsense-account': 'ca-pub-9806436984867634',
+  },
+  openGraph: {
+    title: 'Internet Electronic - Your Guide to Connectivity and Gadgets',
+    description: 'The ultimate source for internet connectivity guides, electronic gadget reviews, and smart home tips. Stay connected with Internet Electronic.',
+    url: 'https://internet-electronic.com',
+    siteName: 'Internet Electronic',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Internet Electronic - Your Guide to Connectivity and Gadgets',
+    description: 'The ultimate source for internet connectivity guides, electronic gadget reviews, and smart home tips. Stay connected with Internet Electronic.',
   },
 };
 

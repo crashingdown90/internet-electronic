@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms and conditions for using the Internet Electronic website.",
+  description: "Read the Terms of Service and guidelines for using the Internet Electronic website, accessing connectivity guides, and using our resources.",
 };
 
 export default function TermsPage() {
@@ -23,7 +23,7 @@ export default function TermsPage() {
 
         <h2>2. Disclaimer</h2>
         <p>
-          The materials on Internet Electronic's website are provided on an 'as is' basis. Internet Electronic makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+          The materials on Internet Electronic&apos;s website are provided on an &ldquo;as is&rdquo; basis. Internet Electronic makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
         </p>
         <p>
           Further, Internet Electronic does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
@@ -31,17 +31,17 @@ export default function TermsPage() {
 
         <h2>3. Limitations</h2>
         <p>
-          In no event shall Internet Electronic or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Internet Electronic's website, even if Internet Electronic or an authorized representative has been notified orally or in writing of the possibility of such damage.
+          In no event shall Internet Electronic or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Internet Electronic&apos;s website, even if Internet Electronic or an authorized representative has been notified orally or in writing of the possibility of such damage.
         </p>
 
         <h2>4. Accuracy of materials</h2>
         <p>
-          The materials appearing on Internet Electronic's website could include technical, typographical, or photographic errors. Internet Electronic does not warrant that any of the materials on its website are accurate, complete or current. Internet Electronic may make changes to the materials contained on its website at any time without notice.
+          The materials appearing on Internet Electronic&apos;s website could include technical, typographical, or photographic errors. Internet Electronic does not warrant that any of the materials on its website are accurate, complete or current. Internet Electronic may make changes to the materials contained on its website at any time without notice.
         </p>
 
         <h2>5. Links</h2>
         <p>
-          Internet Electronic has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Internet Electronic of the site. Use of any such linked website is at the user's own risk.
+          Internet Electronic has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Internet Electronic of the site. Use of any such linked website is at the user&apos;s own risk.
         </p>
 
         <h2>6. Modifications</h2>

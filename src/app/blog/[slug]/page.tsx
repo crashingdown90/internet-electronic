@@ -10,6 +10,14 @@ export async function generateStaticParams() {
   }));
 }
 
+function getCleanDescription(excerpt: string): string {
+  if (excerpt.length <= 155) return excerpt;
+  const truncated = excerpt.slice(0, 152);
+  const lastSpace = truncated.lastIndexOf(" ");
+  if (lastSpace === -1) return truncated + "...";
+  return truncated.slice(0, lastSpace) + "...";
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
@@ -20,15 +28,38 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const title = article.seoTitle || article.title;
+  const description = article.seoDescription || getCleanDescription(article.excerpt);
+  const baseUrl = 'https://internet-electronic.com';
+  const imageUrl = article.image.startsWith('http') ? article.image : `${baseUrl}${article.image}`;
+
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: title,
+    description: description,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
     openGraph: {
-      title: article.title,
-      description: article.excerpt,
+      title: title,
+      description: description,
       type: 'article',
+      url: `${baseUrl}/blog/${article.slug}`,
       publishedTime: article.date,
       authors: [article.author],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+        }
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [imageUrl],
     }
   };
 }
@@ -40,6 +71,35 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!article) {
     notFound();
   }
+
+  const description = article.seoDescription || getCleanDescription(article.excerpt);
+  const baseUrl = 'https://internet-electronic.com';
+  const imageUrl = article.image.startsWith('http') ? article.image : `${baseUrl}${article.image}`;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    image: [imageUrl],
+    datePublished: article.date,
+    dateModified: article.date,
+    author: [
+      {
+        '@type': 'Person',
+        name: article.author,
+        url: `${baseUrl}/about`,
+      },
+    ],
+    publisher: {
+      '@type': 'Organization',
+      name: 'Internet Electronic',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/favicon.ico`,
+      },
+    },
+    description: description,
+  };
 
   // Get related articles (same category, excluding this one)
   const relatedArticles = articles
@@ -74,6 +134,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <>
       {/* Scroll Progress Indicator */}
       <ReadingProgress />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <div className="max-w-6xl mx-auto space-y-12 pb-12 animate-fade-in-up">
         {/* Navigation Breadcrumb */}

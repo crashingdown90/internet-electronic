@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for Internet Electronic regarding data collection, cookies, and Google AdSense compliance.",
+  description: "Read the Privacy Policy for Internet Electronic to understand how we collect data, use cookies, and comply with Google AdSense guidelines.",
 };
 
 export default function PrivacyPolicyPage() {

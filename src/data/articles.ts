@@ -12,6 +12,9 @@ export interface Article {
   content: string;
   date: string;
   author: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  focusKeyphrase?: string;
 }
 
 export interface ArticleWithMeta extends Article {

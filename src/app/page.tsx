@@ -17,16 +17,21 @@ function BlogHomeContent() {
   // Pagination limit state (show only latest articles by default)
   const [visibleCount, setVisibleCount] = useState<number>(6);
 
-  // Reset pagination limit on filter changes
-  useEffect(() => {
+  // Reset pagination limit on filter changes during render phase (React best practice)
+  const [prevCategory, setPrevCategory] = useState("All");
+  const [prevSearchQuery, setPrevSearchQuery] = useState("");
+  if (prevCategory !== selectedCategory || prevSearchQuery !== searchQuery) {
+    setPrevCategory(selectedCategory);
+    setPrevSearchQuery(searchQuery);
     setVisibleCount(6);
-  }, [selectedCategory, searchQuery]);
+  }
 
   // Sync with search queries from layout header form
   useEffect(() => {
     const q = searchParams.get("q");
     const cat = searchParams.get("cat");
     if (q) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSearchQuery(q);
     }
     if (cat) {
@@ -75,8 +80,28 @@ function BlogHomeContent() {
     }
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Internet Electronic",
+    "url": "https://internet-electronic.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://internet-electronic.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div className="space-y-16 pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="sr-only">Internet Electronic - Your Guide to Connectivity and Gadgets</h1>
       {/* Featured Editorial Section (Only shows when not searching/filtering) */}
       {!isFiltering && featuredArticle && (
         <section className="animate-fade-in-up">
@@ -105,11 +130,11 @@ function BlogHomeContent() {
                   </span>
                 </div>
                 
-                <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight group-hover:text-sky-600 transition-colors">
+                <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight group-hover:text-sky-600 transition-colors">
                   <Link href={`/blog/${featuredArticle.slug}`}>
                     {featuredArticle.title}
                   </Link>
-                </h1>
+                </h2>
                 
                 <p className="text-slate-600 text-lg leading-relaxed line-clamp-3">
                   {featuredArticle.excerpt}
